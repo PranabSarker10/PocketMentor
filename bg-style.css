@@ -1,0 +1,63 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+.box {
+  width:100%;
+  height:630px;
+  border:1px solid grey;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+  background-image: url(img/1.jpg);
+  position: relative;
+}
+
+.overlay {
+  position: relative;
+}
+
+.overlay:before{
+  position: absolute;
+  content:" ";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: none;
+  z-index:0;
+}
+
+.overlay:hover:before{
+  display: block;
+}
+
+.red:before {
+  background-color: rgba(255,0,0,0.5);
+}
+
+.blue:before {
+  background-color: rgba(0,0,255,0.5);
+}
+
+.green:before{
+  background-color: rgba(0,255,0,0.5);
+}
+
+.orange:before {
+  background-color: rgba(255,153,0, 0.5);
+}
+
+.box * {
+    position: relative;
+    /* hack */
+}
+
+h1, h2, h4, p {
+  color:white;
+}
